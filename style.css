@@ -1,0 +1,98 @@
+root {
+  --fond: #f5f7fa;
+  --texte: #1c2430;
+  --principal: #1f6feb;
+  --principal-fonce: #1757b8;
+  --carte: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+  line-height: 1.6;
+}
+
+.entete {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: var(--principal);
+  color: #fff;
+}
+
+.entete nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.25rem;
+}
+
+.entete nav a:hover,
+.entete nav a:focus-visible {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.section {
+  background: var(--carte);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  margin-bottom: 0.5rem;
+}
+
+code {
+  background: #eef1f5;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.bouton {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--principal);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.bouton:hover,
+.bouton:focus-visible {
+  background: var(--principal-fonce);
+}
+
+.pied {
+  text-align: center;
+  padding: 1rem;
+  color: #667085;
+}
+
+@media (max-width: 600px) {
+  .entete {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .entete nav a {
+    margin: 0 1rem 0 0;
+  }
+}
